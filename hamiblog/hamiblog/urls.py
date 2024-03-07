@@ -28,9 +28,9 @@ sitemaps = {'category': CategorySitemap, 'post': PostSitemap}
 
 urlpatterns = [
     path('sitemap.xml', sitemap, {'sitemaps': sitemaps}),
+    path('about/', aboutPage, name='about'),
     path('robots.txt', robots_txt, name='robots_txt'),
     path('admin/', admin.site.urls),
     path('', include('blog.urls')),
     path('', indexPage, name='index'),
-    path('about/', aboutPage, name='about'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
