@@ -1,14 +1,14 @@
 {
     "builds": [
         {
-          "src": "project/wsgi.py",
+          "src": "hamiblog/wsgi.py",
           "use": "@vercel/python"
         }
       ],
       "routes": [
         {
           "src": "/(.*)",
-          "dest": "project/wsgi.py"
+          "dest": "hamiblog/wsgi.py"
         }
       ]
     }
