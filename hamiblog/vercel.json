@@ -1,13 +1,14 @@
 {
-    "builds": [{
-        "src": "hamiblog/wsgi.py",
-        "use": "@vercel/python",
-        "config": { "maxLambdaSize": "15mb", "runtime": "python3.11.5" }
-    }],
-    "routes": [
+    "builds": [
         {
-            "src": "/(.*)",
-            "dest": "hamiblog/wsgi.py"
+          "src": "project/wsgi.py",
+          "use": "@vercel/python"
         }
-    ]
-}
+      ],
+      "routes": [
+        {
+          "src": "/(.*)",
+          "dest": "project/wsgi.py"
+        }
+      ]
+    }
